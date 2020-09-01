@@ -58,6 +58,7 @@ def yahoo_income_statement(ticker='AAPL'):
     headers = income_df.iloc[0]
     income_df = income_df[1:]
     income_df.columns = headers
+    income_df.set_index('Breakdown', inplace=True, drop=True)
 
     return income_df
 
@@ -118,6 +119,7 @@ def yahoo_balance_sheet(ticker='AAPL'):
     headers = balancesheet_df.iloc[0]
     balancesheet_df = balancesheet_df[1:]
     balancesheet_df.columns = headers
+    balancesheet_df.set_index('Breakdown', inplace=True, drop=True)
 
     return balancesheet_df
 
@@ -178,6 +180,7 @@ def yahoo_cash_flow(ticker='AAPL'):
     headers = cashflow_df.iloc[0]
     cashflow_df = cashflow_df[1:]
     cashflow_df.columns = headers
+    cashflow_df.set_index('Breakdown', inplace=True, drop=True)
 
     return cashflow_df
 

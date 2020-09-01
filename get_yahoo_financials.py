@@ -9,7 +9,7 @@ from bs4 import BeautifulSoup
 # =============================================================================
 
 
-def yahoo_income_statement(ticker):
+def yahoo_income_statement(ticker='AAPL'):
 
     # ## Read the yahoo income statement url
     income_url = f'https://finance.yahoo.com/quote/{ticker}/financials?p={ticker}'
@@ -69,7 +69,7 @@ def yahoo_income_statement(ticker):
 # =============================================================================
 
 
-def yahoo_balance_sheet(ticker):
+def yahoo_balance_sheet(ticker='AAPL'):
 
     # ## Read the yahoo balance sheet url
     balancesheet_url = f'https://finance.yahoo.com/quote/{ticker}/balance-sheet?p={ticker}'
@@ -129,7 +129,7 @@ def yahoo_balance_sheet(ticker):
 # =============================================================================
 
 
-def yahoo_cash_flow(ticker):
+def yahoo_cash_flow(ticker='AAPL'):
 
     # ## Read the yahoo cash flow url
     cashflow_url = f'https://finance.yahoo.com/quote/{ticker}/cash-flow?p={ticker}'

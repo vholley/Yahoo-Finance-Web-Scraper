@@ -3,7 +3,7 @@
 import pandas as pd
 import urllib.request as ur
 from bs4 import BeautifulSoup
-
+import warnings
 
 # Begin yahoo_income_statement(ticker)
 # =============================================================================
@@ -59,6 +59,8 @@ def yahoo_income_statement(ticker='AAPL'):
     income_df = income_df[1:]
     income_df.columns = headers
     income_df.set_index('Breakdown', inplace=True, drop=True)
+
+    warnings.warn('Amounts are in thousands.')
 
     return income_df
 
@@ -121,6 +123,8 @@ def yahoo_balance_sheet(ticker='AAPL'):
     balancesheet_df.columns = headers
     balancesheet_df.set_index('Breakdown', inplace=True, drop=True)
 
+    warnings.warn('Amounts are in thousands.')
+
     return balancesheet_df
 
 # End yahoo_balance_sheet(ticker):
@@ -181,6 +185,8 @@ def yahoo_cash_flow(ticker='AAPL'):
     cashflow_df = cashflow_df[1:]
     cashflow_df.columns = headers
     cashflow_df.set_index('Breakdown', inplace=True, drop=True)
+
+    warnings.warn('Amounts are in thousands.')
 
     return cashflow_df
 

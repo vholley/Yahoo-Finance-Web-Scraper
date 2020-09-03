@@ -1,5 +1,9 @@
 Yahoo-Finance-Web-Scraper
 
+
+Yahoo Finance no longer has a publically available API, so I decided to create my own tool to pull a company's financial information.
+
+
 This uses BeautifulSoup and urllib to scrape a company's income statement, balance sheet, and cash flow statement data from yahoo finance.
 
 get_yahoo_financials.py contains the following functions:
